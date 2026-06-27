@@ -3,7 +3,7 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { FaInstagram } from 'react-icons/fa'
 
 const images = [
-  'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80',
+  't.ly/WPJi_',
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80',
   'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=400&q=80',
   'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&q=80',
