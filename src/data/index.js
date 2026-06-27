@@ -25,7 +25,7 @@ import kitchenBurgundyDetail from '@/assets/projects/kitchen-burgundy-detail.jpg
 
 export const COMPANY = {
   name: 'Amrit Kitchen & Bedrooms',
-  phone: '+44 7123 456 789',
+  phone: '+44 7868 199 964',
   email: 'info@amritkitchens.co.uk',
   address: '123 High Street, London, United Kingdom',
   instagram: 'https://www.instagram.com/amritkitchenbedrooms?igsh=bGZ2ZDl4YTdnY2M=',
