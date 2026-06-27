@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-[Manrope,sans-serif] font-bold text-xl mb-4">Amrit<span className="text-[#B8956A]">.</span></h3>
+            <h3 className="font-[Manrope,sans-serif] font-bold text-xl mb-4">Amrit <span className="text-[#B8956A]">Kitchens</span> &amp; Bedrooms</h3>
             <p className="text-sm text-white/50 leading-relaxed">
               Bespoke kitchens, bedrooms and interior furniture crafted with precision and care.
             </p>

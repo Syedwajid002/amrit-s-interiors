@@ -6,13 +6,13 @@ import { SectionHeader } from '@/components/SectionHeader'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Process from '@/components/Process'
 import Instagram from '@/components/Instagram'
-import { SERVICES, PROJECTS, TESTIMONIALS } from '@/data'
+import { SERVICES, PROJECTS, TESTIMONIALS, HERO_IMAGE } from '@/data'
 
 function Hero() {
   return (
     <section className="relative w-full" style={{ height: '90vh', minHeight: '550px' }}>
       <img
-        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80"
+        src={HERO_IMAGE}
         alt="Modern luxury kitchen"
         className="absolute inset-0 w-full h-full object-cover"
       />

@@ -9,7 +9,7 @@ export default function Navbar() {
   const location = useLocation()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30)
+    const onScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -17,10 +17,10 @@ export default function Navbar() {
   useEffect(() => setOpen(false), [location])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm' : 'bg-white/0'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between" style={{ height: '72px' }}>
-        <Link to="/" className="font-[Manrope,sans-serif] font-bold text-xl text-[#1A1A1A]">
-          Amrit<span className="text-[#B8956A]">.</span>
+        <Link to="/" className={`font-[Manrope,sans-serif] font-bold text-lg ${scrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
+          Amrit <span className="text-[#B8956A]">Kitchens</span> & Bedrooms
         </Link>
 
         {/* Desktop nav */}
@@ -29,18 +29,18 @@ export default function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className={`text-sm font-medium transition-colors ${location.pathname === link.path ? 'text-[#B8956A]' : 'text-[#2C2C2C]/70 hover:text-[#2C2C2C]'}`}
+              className={`text-sm font-medium transition-colors ${location.pathname === link.path ? 'text-[#B8956A]' : scrolled ? 'text-[#2C2C2C]/70 hover:text-[#2C2C2C]' : 'text-white/90 hover:text-white'}`}
             >
               {link.label}
             </Link>
           ))}
-          <Link to="/contact" className="ml-2 px-5 py-2.5 bg-[#2C2C2C] text-white text-sm font-medium rounded-lg hover:bg-[#1A1A1A] transition-colors">
+          <Link to="/contact" className="ml-2 px-5 py-2.5 bg-[#B8956A] text-white text-sm font-medium rounded-lg hover:bg-[#6B4C3B] transition-colors">
             Get a Quote
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl text-[#2C2C2C]" aria-label="Menu">
+        <button onClick={() => setOpen(!open)} className={`md:hidden text-2xl ${scrolled ? 'text-[#2C2C2C]' : 'text-white'}`} aria-label="Menu">
           {open ? <HiX /> : <HiMenu />}
         </button>
       </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link to="/contact" className="mt-2 px-5 py-2.5 bg-[#2C2C2C] text-white text-sm font-medium rounded-lg text-center">
+            <Link to="/contact" className="mt-2 px-5 py-2.5 bg-[#B8956A] text-white text-sm font-medium rounded-lg text-center">
               Get a Quote
             </Link>
           </div>

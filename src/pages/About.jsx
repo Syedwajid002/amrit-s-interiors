@@ -2,6 +2,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { SectionHeader } from '@/components/SectionHeader'
 import { Link } from 'react-router-dom'
 import { HiArrowRight } from 'react-icons/hi2'
+import { ABOUT_IMAGE } from '@/data'
 
 export default function About() {
   return (
@@ -28,7 +29,7 @@ export default function About() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80"
+              src={ABOUT_IMAGE}
               alt="Kitchen craftsmanship"
               className="w-full h-[380px] object-cover rounded-xl"
             />

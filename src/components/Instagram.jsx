@@ -1,26 +1,18 @@
 import { FadeIn } from '@/components/FadeIn'
 import { SectionHeader } from '@/components/SectionHeader'
 import { FaInstagram } from 'react-icons/fa'
-
-const images = [
-  't.ly/WPJi_',
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80',
-  'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=400&q=80',
-  'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&q=80',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80',
-  'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80',
-]
+import { INSTAGRAM_IMAGES } from '@/data'
 
 export default function Instagram() {
   return (
     <section className="py-20 px-6 bg-[#FAF9F7]">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader label="@amritkitchens" title="Follow Us on Instagram" />
+        <SectionHeader label="@amritkitchenbedrooms" title="Follow Us on Instagram" />
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          {images.map((img, i) => (
+          {INSTAGRAM_IMAGES.map((img, i) => (
             <FadeIn key={i} delay={i * 0.04}>
               <a
-                href="https://instagram.com/amritkitchens"
+                href="https://www.instagram.com/amritkitchenbedrooms?igsh=bGZ2ZDl4YTdnY2M="
                 target="_blank"
                 rel="noreferrer"
                 className="group relative block overflow-hidden rounded-lg"
@@ -35,8 +27,8 @@ export default function Instagram() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <a href="https://instagram.com/amritkitchens" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#2C2C2C] hover:text-[#B8956A] transition-colors">
-            <FaInstagram /> Follow @amritkitchens
+          <a href="https://www.instagram.com/amritkitchenbedrooms?igsh=bGZ2ZDl4YTdnY2M=" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#2C2C2C] hover:text-[#B8956A] transition-colors">
+            <FaInstagram /> Follow @amritkitchenbedrooms
           </a>
         </div>
       </div>
