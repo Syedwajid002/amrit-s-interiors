@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { HiPhone, HiEnvelope, HiMapPin } from 'react-icons/hi2'
 import { FaInstagram, FaFacebookF } from 'react-icons/fa'
 import { COMPANY, NAV_LINKS, SERVICES } from '@/data'
+import logo from '../x_files/amrit logo.jpeg'
 
 export default function Footer() {
   return (
@@ -10,7 +11,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-[Manrope,sans-serif] font-bold text-xl mb-4">Amrit <span className="text-[#B8956A]">Kitchens</span> &amp; Bedrooms</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Amrit Interiors logo" className="h-12 w-auto object-contain" loading="lazy" />
+              <h3 className="font-[Manrope,sans-serif] font-bold text-xl">Amrit <span className="text-[#C0392B]">Kitchens</span> <span className="text-white">&amp; Bedrooms</span></h3>
+            </div>
             <p className="text-sm text-white/50 leading-relaxed">
               Bespoke kitchens, bedrooms and interior furniture crafted with precision and care.
             </p>
